@@ -70,7 +70,10 @@ fn quantum_dice(
     current_player: usize,
     cache: &mut Cache,
 ) -> Wins {
-    if let Some(wins) = cache.get(&(pos1, pos2, score1, score2, current_player)).copied() {
+    if let Some(wins) = cache
+        .get(&(pos1, pos2, score1, score2, current_player))
+        .copied()
+    {
         return wins;
     }
 

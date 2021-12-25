@@ -41,7 +41,7 @@ fn illegal_score(l: &str) -> usize {
             ')' | ']' | '}' | '>' => {
                 if let Some(top) = stack.pop() {
                     if !braces_match(top, ch) {
-                        return score_p1(ch)
+                        return score_p1(ch);
                     }
                 }
             }

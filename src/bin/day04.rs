@@ -1,6 +1,6 @@
 use std::{collections::HashSet, str::FromStr};
 
-use anyhow::{Result, bail};
+use anyhow::{bail, Result};
 
 struct Cell {
     value: u32,

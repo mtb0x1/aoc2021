@@ -113,18 +113,16 @@ fn part2(input: &str) -> Result<usize> {
             for neighbour in caves.neighbouring_points(pt.0, pt.1) {
                 match neighbour {
                     None => continue,
-                    Some(p) => {
-                        match caves.get(p.0, p.1) {
-                            None => continue,
-                            Some(x) => {
-                                if x == 9 || visited.get(&p).is_some() {
-                                    continue;
-                                }
-                                visited.insert(p);
-                                queue.push(p);
+                    Some(p) => match caves.get(p.0, p.1) {
+                        None => continue,
+                        Some(x) => {
+                            if x == 9 || visited.get(&p).is_some() {
+                                continue;
                             }
+                            visited.insert(p);
+                            queue.push(p);
                         }
-                    }
+                    },
                 }
             }
         }

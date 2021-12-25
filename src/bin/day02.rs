@@ -1,5 +1,5 @@
-use std::str::FromStr;
 use anyhow::{bail, Result};
+use std::str::FromStr;
 
 #[derive(Debug, Default)]
 struct Submarine {
